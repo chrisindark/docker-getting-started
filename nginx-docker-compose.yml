@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  nginx:
+    image: "nginx:alpine"
+    ports:
+      - 80:80
+    stdin_open: true
+    tty: true
+    volumes:
+      - /usr/share/nginx/html:/usr/share/nginx/html
