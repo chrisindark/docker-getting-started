@@ -24,3 +24,11 @@ docker stop <container_id>
 ### remove a container in the system
 
 docker rm <container_id>
+
+docker build --no-cache -t docker-getting-started -f Dockerfile . --build-arg NODE_ENV=development
+
+docker run --name docker-getting-started -i -t -p 80:80 docker-getting-started:latest
+
+docker tag docker-getting-started:latest chrisindark/docker-getting-started:latest
+
+docker push chrisindark/docker-getting-started:latest
